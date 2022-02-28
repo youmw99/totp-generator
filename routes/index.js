@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   const totp = require("totp-generator");
   const token = totp(req.query.key);
-  res.json('index', { token: token });
+  res.json({ token: token });
 });
 
 module.exports = router;
